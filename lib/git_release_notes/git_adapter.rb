@@ -10,12 +10,14 @@ module GitReleaseNotes
       logs = logs_messages_between_sha(commit);
       logs
         .select { |l| l[regexp] }
-        .map { |l| { key: l[regexp], message: l } }
+        .map { |l| { key: l[regexp], git_message: l } }
     end
 
     def logs_messages_between_sha(commit)
       logs = client.log.between(commit, 'HEAD')
-      logs.map { |c| c.message }
+      logs.map do |c|
+        c.message
+      end
     end
 
     private

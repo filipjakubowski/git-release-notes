@@ -1,3 +1,6 @@
 require 'git_release_notes/git_adapter'
 require 'git_release_notes/jira_adapter'
 require 'git_release_notes/jira_release_notes'
+require 'git_release_notes/jira_issue'
+require 'git_release_notes/issue_entry'
+require 'git_release_notes/release_notes'

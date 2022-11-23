@@ -16,11 +16,10 @@ Gem::Specification.new do |s|
   s.homepage      = 'https://github.com/filipjakubowski'
   s.metadata      = { "source_code_uri" => "https://github.com/filipjakubowski/git_release_notes" }
 
-  s.files          = %w{lib/git_release_notes.rb lib/git_release_notes/jira_adapter.rb lib/git_release_notes/jira_release_notes.rb lib/git_release_notes/git_adapter.rb lib/git_release_notes/version.rb}
+  s.files          = %w{lib/git_release_notes.rb lib/git_release_notes/release_notes.rb lib/git_release_notes/jira_issue.rb lib/git_release_notes/issue_entry.rb lib/git_release_notes/jira_adapter.rb lib/git_release_notes/jira_release_notes.rb lib/git_release_notes/git_adapter.rb lib/git_release_notes/version.rb}
 
   s.require_paths = %w[lib]
 
-  s.add_dependency 'jira-ruby', '~>2.2.0'
   s.add_dependency 'git', '~>1.12'
 
   ## List your development dependencies here. Development dependencies are
